@@ -1,0 +1,242 @@
+/* ----------------------------------
+
+Nom du site: SUNTV
+Auteur: Olga
+Version: 1.0
+Dernier changement: 07-2024 
+Main Font : Kalnia Glaze
+Main Color : #52ace4
+
+-------------------------------------
+
+[table de matière]
+        
+    01. Modèle de CSS par défaut
+    02. Typography
+
+
+    03. Preloader
+    04. Breadcrumb
+    05. Navbar
+        - Navbar Default
+        - Navbar Box
+        - Navbar Sticky
+        - Navbar Transparent
+    06. About
+    07. Features
+    08. Work Process
+    09. Pricing Table
+        - Simple Version
+        - Tab Version
+    10. Team
+        - Default Version
+        - Carousel Version
+    11. Testimonials
+    12. Form
+    13. Clients
+    14. Video Features
+    15. Faq
+    16. Software Overview
+        - Tab Version
+        - Carousel Version
+    17. Fun Factors
+    18. Services
+        - Default Version
+        - Carousel Version
+    19. Blog
+    20. Concat Area
+    21. Google Maps
+    22. Error 404
+    23. Footer
+    24. Media Query
+    25. PHP Contact Form
+    26. Others
+
+*/
+
+
+/*
+** General Styles for HTML tags
+*/
+
+/*Notre font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*.roboto-condensed-titre{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 90px
+  }*/
+  
+  
+/*Header et menu popup*/
+  header .menu-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #52ace4;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 10%;
+}
+
+header .menu-popup a{
+    color: #ccc;
+}
+header .menu-popup a:hover{
+    background-color: #ccc;
+    color: #52ace4;
+}
+header .menu-popup a:hover{
+    background-color: #ccc;
+    color: #52ace4;
+    padding: 0 20px 0 0;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2352ace4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M4 6h16M4 12h16m-7 6h7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px; 
+}
+
+header .menu-popup ul {
+    list-style: none;
+    padding: 0;
+}
+
+header .menu-popup li {
+    margin: 10px 0;
+}
+
+header .menu-popup .submenu {
+    padding-left: 20px;
+}
+
+header .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+header .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+/*grand titre*/
+
+h1 {
+    text-transform: uppercase;
+}
+.roboto-condensed-titre {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+@media (min-width: 1200px) {
+    .roboto-condensed-titre {
+        font-size: 90px; /* Taille de police pour les très grands écrans */
+    }
+}
+@media (max-width: 1199.98px) and (min-width: 992px) {
+    .roboto-condensed-titre {
+        font-size: 80px; /* Taille de police pour les grands écrans */
+    }
+}
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .roboto-condensed-titre {
+        font-size: 70px; /* Taille de police pour les écrans moyens */
+    }
+}
+@media (max-width: 767.98px) and (min-width: 576px) {
+    .roboto-condensed-titre {
+        font-size: 60px; /* Taille de police pour les petits écrans */
+    }
+}
+@media (max-width: 575.98px) {
+    .roboto-condensed-titre {
+        font-size: 50px; /* Taille de police pour les très petits écrans */
+    }
+}
+
+
+/*Section accueil*/
+
+
+/*fond video de l'accueil*/
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); 
+}
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+}
+
+/*boutton de='accueil*/
+.loko1{
+    background-color: #52ace4;
+    color: white;
+    border: solid #52ace4;
+}
+.loko1:hover{
+    background-color: transparent;
+    border: solid #52ace4;
+}
+.loko2{
+    background-color: transparent;
+    color: #52ace4;
+    border: solid #52ace4;
+}
+.loko2:hover{
+    background-color: #52ace4;
+    border: solid #52ace4;
+}
+
+/*color de fond de l'en-tête*/
+.bg-lighty{
+    background-color: #52ace4;
+}
+.bg-black{
+    background-color: black;
+}
+
+/*animation text*/
+

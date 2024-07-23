@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUN TV</title>
+
+    <link rel="shortcut icon" href="medias/logo/favn.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!--------------------------En-tête de page-------------------------->
+
+    <header>
+        <nav class="navbar navbar-light bg-black">
+            <a class="navbar-brand" href="#">
+                <img src="medias/logo/your view.png"alt="Logo">
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    
+        <!--Début Menu popup-->
+        <div class="overlay"></div>
+        <div class="menu-popup">
+            <span class="close-btn">&times;</span>
+            <ul  class="menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#">Nos vidéos</a>
+                    <ul class="submenu">
+                        <li><a href="#">Journaux</a></li>
+                        <li><a href="#">Documentaires</a></li>
+                        <li><a href="#">Emissions</a></li>
+                        <li><a href="#">Autres</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <!--Fin Menu popup-->
+
+    </header>
+
+    <!--------------------------Section accueil-------------------------->
+
+    <main>
+        <!--<section class="accueil row justify-content-center align-items-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <h1 class="roboto-condensed-titre my-4">Le premier grand titre de la page</h1>
+                <button type="button" class="btn btn-primary mr-2">Bouton un</button>
+                <button type="button" class="btn btn-secondary">Bouton deux</button>
+            </div>
+        </section>-->
+        
+        <!-- fond avec vidéo simple-->
+        <section id="accueil" class="video-background">
+            <video autoplay muted loop>
+                <source src="medias/videos/video-home.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+                <div class="container">
+                    <h1 class="roboto-condensed-titre wave-text">Le premier grand titre de la page</h1>
+                    <button type="button" class="btn btn-primary mr-2 loko1">Bouton un</button>
+                    <button type="button" class="btn btn-secondary loko2">Bouton deux</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
