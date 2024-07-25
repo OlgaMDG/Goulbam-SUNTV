@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--Les polices-->
+    <link rel="preload" href="./font/font/ChromiumOneLetPlain.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap" rel="stylesheet">
+
+    <!--Le style css-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,14 +22,17 @@
     <!--------------------------En-tête de page-------------------------->
 
     <header>
+
+        <!--Début de bar d'en-tête-->
         <nav class="navbar navbar-light bg-black">
             <a class="navbar-brand" href="#">
-                <img src="medias/logo/your view.png"alt="Logo">
+                <img src="medias/logo/logotransparent2.png"alt="Logo">
             </a>
             <button class="navbar-toggler custom-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
+        <!--Fin de bar d'en-tête-->
     
         <!--Début Menu popup-->
         <div class="overlay"></div>
@@ -32,7 +40,7 @@
             <span class="close-btn">&times;</span>
             <ul  class="menu">
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#">Nos vidéos</a>
+                <li><a href="#videos">Nos vidéos</a>
                     <ul class="submenu">
                         <li><a href="#">Journaux</a></li>
                         <li><a href="#">Documentaires</a></li>
@@ -60,18 +68,54 @@
         </section>-->
         
         <!-- fond avec vidéo simple-->
-        <section id="accueil" class="video-background">
+        <section id="accueil" class="video-background heighty">
             <video autoplay muted loop>
                 <source src="medias/videos/video-home.mp4" type="video/mp4">
             </video>
             <div class="content">
                 <div class="container">
                     <h1 class="roboto-condensed-titre wave-text">Le premier grand titre de la page</h1>
-                    <button type="button" class="btn btn-primary mr-2 loko1">Bouton un</button>
-                    <button type="button" class="btn btn-secondary loko2">Bouton deux</button>
+                    <button type="button" class="btn btn-primary mr-2 loko1">Les directs</button>
+                    <button type="button" class="btn btn-secondary loko2">Les rediffusions</button>
                 </div>
             </div>
         </section>
+
+        <!--------------------------Section Vidéos-------------------------->
+
+        <section id="videos" class="videos heighty default-padding bg-cover">
+            <div class="videos-container">
+                <h1 class="titre-anime">REGARDER NOS VIDEOS ICI...</h1>
+                <div class="video-container top-left">
+                    <video src="./medias/videos/video-journaux.mp4" class="video" autoplay muted loop></video>
+                    <div class="video-text">
+                        <a href="https://example.com" target="_blank">Journaux</a>
+                    </div>
+                </div>
+                <div class="video-container top-right">
+                    <video src="./medias/videos/video-documentaire.mp4" class="video" autoplay muted loop></video>
+                    <div class="video-text">
+                        <a href="https://example.com" target="_blank">Documentaires</a>
+                    </div>
+                </div>
+                <div class="video-container bottom-left">
+                    <video src="./medias/videos/video-emission2.mp4" class="video" autoplay muted loop></video>
+                    <div class="video-text">
+                        <a href="https://example.com" target="_blank">Emissions</a>
+                    </div>
+                </div>
+                <div class="video-container bottom-right">
+                    <video src="./medias/videos/video-autres.mp4" class="video" autoplay muted loop></video>
+                    <div class="video-text">
+                        <a href="https://example.com" target="_blank">Autres...</a>
+                    </div>
+                </div>
+                <div class="rotating-image">
+                    <img src="./medias/photos/center.png" alt="Sun" class="center-image">
+                </div>
+            </div>
+        </section>
+
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

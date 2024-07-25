@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Chromium One LET';
+    src: url('ChromiumOneLetPlain.eot');
+    src: local('Chromium One LET Plain:1.0'), local('ChromiumOneLetPlain'),
+        url('ChromiumOneLetPlain.eot?#iefix') format('embedded-opentype'),
+        url('ChromiumOneLetPlain.woff2') format('woff2'),
+        url('ChromiumOneLetPlain.woff') format('woff'),
+        url('ChromiumOneLetPlain.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

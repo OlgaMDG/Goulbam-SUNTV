@@ -11,46 +11,7 @@ Main Color : #52ace4
 
 [table de matière]
         
-    01. Modèle de CSS par défaut
-    02. Typography
-
-
-    03. Preloader
-    04. Breadcrumb
-    05. Navbar
-        - Navbar Default
-        - Navbar Box
-        - Navbar Sticky
-        - Navbar Transparent
-    06. About
-    07. Features
-    08. Work Process
-    09. Pricing Table
-        - Simple Version
-        - Tab Version
-    10. Team
-        - Default Version
-        - Carousel Version
-    11. Testimonials
-    12. Form
-    13. Clients
-    14. Video Features
-    15. Faq
-    16. Software Overview
-        - Tab Version
-        - Carousel Version
-    17. Fun Factors
-    18. Services
-        - Default Version
-        - Carousel Version
-    19. Blog
-    20. Concat Area
-    21. Google Maps
-    22. Error 404
-    23. Footer
-    24. Media Query
-    25. PHP Contact Form
-    26. Others
+    
 
 */
 
@@ -62,17 +23,50 @@ Main Color : #52ace4
 /*Notre font*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*.roboto-condensed-titre{
-    font-family: "Roboto Condensed", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
+@font-face {
+    font-family: 'chromium';
+    src: url('../font/font/ChromiumOneLetPlain.woff2') format('woff2'),
+         url('../font/font/ChromiumOneLetPlain.woff') format('woff'),
+         url('../font/font/ChromiumOneLetPlain.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
-    font-size: 90px
-  }*/
-  
+}
+
+/*css default*/
+.default-padding {
+    padding-top: 25%;
+    padding-bottom: 25%;
+    position: relative;
+}
+
+.heighty{
+    height: 100vh;
+}
+.bg-cover {
+    background-position: center center;
+    background-size: cover;
+}
+
+/*test de fond (à supprimer à la fin!!!!!!!!!!!)*/
+.bg-lighty{
+    background-color: #52ace4;
+}
+.bg-black{
+    background-color: black;
+}
+
   
 /*Header et menu popup*/
-  header .menu-popup {
+.navbar {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    padding: 5px 0;
+    z-index: 1000;
+}
+
+header .menu-popup {
     display: none;
     position: fixed;
     top: 50%;
@@ -140,7 +134,10 @@ header .close-btn {
     color: #ccc;
 }
 
-/*grand titre*/
+
+/*Section accueil*/
+
+/*Grand titre*/
 
 h1 {
     text-transform: uppercase;
@@ -153,39 +150,34 @@ h1 {
 }
 @media (min-width: 1200px) {
     .roboto-condensed-titre {
-        font-size: 90px; /* Taille de police pour les très grands écrans */
+        font-size: 90px; 
     }
 }
 @media (max-width: 1199.98px) and (min-width: 992px) {
     .roboto-condensed-titre {
-        font-size: 80px; /* Taille de police pour les grands écrans */
+        font-size: 80px; 
     }
 }
 @media (max-width: 991.98px) and (min-width: 768px) {
     .roboto-condensed-titre {
-        font-size: 70px; /* Taille de police pour les écrans moyens */
+        font-size: 70px; 
     }
 }
 @media (max-width: 767.98px) and (min-width: 576px) {
     .roboto-condensed-titre {
-        font-size: 60px; /* Taille de police pour les petits écrans */
+        font-size: 60px; 
     }
 }
 @media (max-width: 575.98px) {
     .roboto-condensed-titre {
-        font-size: 50px; /* Taille de police pour les très petits écrans */
+        font-size: 50px; 
     }
 }
 
-
-/*Section accueil*/
-
-
-/*fond video de l'accueil*/
+/*fond video*/
 .video-background {
     position: relative;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -210,7 +202,7 @@ h1 {
     color: #fff;
 }
 
-/*boutton de='accueil*/
+/*boutton accueil (à voir si on peut changer leur place dans css par défaut)!!!!!!!!!!!!*/
 .loko1{
     background-color: #52ace4;
     color: white;
@@ -230,13 +222,205 @@ h1 {
     border: solid #52ace4;
 }
 
-/*color de fond de l'en-tête*/
-.bg-lighty{
-    background-color: #52ace4;
-}
-.bg-black{
-    background-color: black;
+
+
+/* sections videos*/
+
+/*animation du titre*/
+.videos h1{
+    font-family: 'chromium';
+    color: #08F1DC;
+    font-size: 36px;
 }
 
-/*animation text*/
+.titre-anime {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 2rem;
+    animation: marquee 10s linear infinite;
+    color: #fff;
+    top:0;!important
+}
 
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/*nos videos*/
+.videos {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../medias/photos/fond3.jpg);
+}
+
+.videos-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.video-container {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 5px solid #52ace4;
+    border-radius: 15px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: opacity(0.6) hue-rotate(200deg);
+    transition: transform 0.3s ease;
+}
+
+.video:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+
+.video-text {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    display: none;
+    text-align: center;
+}
+
+.video-container:hover .video-text {
+    display: block;
+}
+
+.video-text a {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(82, 172, 228, 0.5); 
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.video-container a:hover {
+    text-decoration: underline; 
+}
+
+.top-left {
+    top: 40%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.top-right {
+    top: 40%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.bottom-left {
+    bottom: 15%;
+    left: 0;
+    transform: translate(-50%, 50%);
+}
+
+.bottom-right {
+    bottom: 15%;
+    right: 0;
+    transform: translate(50%, 50%);
+}
+
+/*animation d'image centre en rotation*/
+.rotating-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    animation: rotate 20s linear infinite;
+    z-index: 1; 
+}
+
+.center-image {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Ecran téléphone*/
+/* pour la section vidéos */
+@media (max-width: 768px) {
+.top-left{
+top: 40%;
+left: 25%;
+}
+
+.top-right {
+top: 40%;
+right: 25%;
+}
+
+.bottom-left {
+bottom: 40%;
+left: 25%;
+}
+
+.bottom-right {
+bottom: 40%;
+right: 25%;
+}    
+
+.video-container video{
+display: none;
+border: none;
+border-radius: 0;
+}
+.video-container{
+border: none;
+border-radius: 0;
+}
+
+.video-text {
+display: block;
+font-size: 2rem;
+padding: 5px;
+width: 15rem;
+}
+
+.video-text a {
+color: white;
+text-decoration: none;
+background-color: rgba(82, 172, 228, 0.5); /* Fond semi-transparent pour meilleure visibilité */
+padding: 10px;
+border-radius: 5px;
+display: block;
+}
+
+.video-text a:hover {
+color: white;
+text-decoration: underline;
+}
+
+.rotating-image{
+display: none;
+}
+}
