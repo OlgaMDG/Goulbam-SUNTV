@@ -370,26 +370,25 @@ h1 {
 /* pour la section vidéos */
 @media (max-width: 768px) {
 .top-left{
-top: 40%;
-left: 25%;
+top: 0;
+left: 35%;
 }
 
 .top-right {
 top: 40%;
-right: 25%;
+right: 75%;
 }
 
 .bottom-left {
-bottom: 40%;
-left: 25%;
+top: 50%;
 }
 
 .bottom-right {
-bottom: 40%;
-right: 25%;
-}    
+top: 75%;
+left: 0;
+}
 
-.video-container video{
+/*.video-container video{
 display: none;
 border: none;
 border-radius: 0;
@@ -397,7 +396,7 @@ border-radius: 0;
 .video-container{
 border: none;
 border-radius: 0;
-}
+}*/
 
 .video-text {
 display: block;
@@ -409,7 +408,7 @@ width: 15rem;
 .video-text a {
 color: white;
 text-decoration: none;
-background-color: rgba(82, 172, 228, 0.5); /* Fond semi-transparent pour meilleure visibilité */
+background-color: rgba(82, 172, 228, 0.5);
 padding: 10px;
 border-radius: 5px;
 display: block;
@@ -423,4 +422,25 @@ text-decoration: underline;
 .rotating-image{
 display: none;
 }
+}
+
+
+
+/*Nos videos de chaque catégorie*/
+.video-content {
+    margin-bottom: 30px;
+}
+.video-content video {
+    width: 100%;
+    height: auto;
+}
+.date-overlay {
+    position: absolute;
+    bottom: -25px;
+    right: 10px;
+    background-color: rgba(82, 172, 228, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
 }

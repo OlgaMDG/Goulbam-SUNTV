@@ -89,25 +89,25 @@
                 <div class="video-container top-left">
                     <video src="./medias/videos/video-journaux.mp4" class="video" autoplay muted loop></video>
                     <div class="video-text">
-                        <a href="https://example.com" target="_blank">Journaux</a>
+                        <a href="#video-journaux" target="_blank">Journaux</a>
                     </div>
                 </div>
                 <div class="video-container top-right">
                     <video src="./medias/videos/video-documentaire.mp4" class="video" autoplay muted loop></video>
                     <div class="video-text">
-                        <a href="https://example.com" target="_blank">Documentaires</a>
+                        <a href="#video-documentaires" target="_blank">Documentaires</a>
                     </div>
                 </div>
                 <div class="video-container bottom-left">
                     <video src="./medias/videos/video-emission2.mp4" class="video" autoplay muted loop></video>
                     <div class="video-text">
-                        <a href="https://example.com" target="_blank">Emissions</a>
+                        <a href="#video-emissions" target="_blank">Emissions</a>
                     </div>
                 </div>
                 <div class="video-container bottom-right">
                     <video src="./medias/videos/video-autres.mp4" class="video" autoplay muted loop></video>
                     <div class="video-text">
-                        <a href="https://example.com" target="_blank">Autres...</a>
+                        <a href="#video-autres" target="_blank">Autres...</a>
                     </div>
                 </div>
                 <div class="rotating-image">
@@ -116,6 +116,37 @@
             </div>
         </section>
 
+        <!--------------------------Videos journaux -------------------------->
+
+        <section id="video-journaux" class="video-journaux">
+            <div class="container">
+                <h1 class="mt-4">Nos vidéos journaux</h1>
+                <div class="form-group">
+                    <label for="dateSearch">Recherche par date</label>
+                    <input type="date" id="dateSearch" class="form-control">
+                </div>
+                <div class="row mt-4" id="videoGallery">
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-journaux.mp4" type="video/mp4">
+                        </video>
+                        <div class="date-overlay">2024-07-28</div>
+                    </div>
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-journaux.mp4" type="video/mp4">
+                        </video>
+                        <div class="date-overlay">2024-07-29</div>
+                    </div>
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-journaux.mp4" type="video/mp4">
+                        </video>
+                        <div class="date-overlay">2024-07-30</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

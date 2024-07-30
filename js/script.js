@@ -1,14 +1,28 @@
 $(document).ready(function(){
     $('.navbar-toggler').click(function(){
-        $('.overlay').show();
-        $('.menu-popup').show();
+        $('.overlay, .menu-popup').show();
     });
     $('.overlay, .close-btn, .menu').click(function(){
-        $('.overlay').hide();
-        $('.menu-popup').hide();
+        $('.overlay, .menu-popup').hide();
     });
+
+    const currentDate = new Date().toLocaleString();
+    $('.date-overlay').text(currentDate);
+
+    /*$('#dateSearch').on('input', function() {
+        const searchDate = $(this).val();
+        $('.video-container').each(function() {
+            const videoDate = $(this).find('.date-overlay').text();
+            if (videoDate === searchDate) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });*/
 });
 
 
 
 
+                               
