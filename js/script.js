@@ -1,28 +1,33 @@
 $(document).ready(function(){
+
+    /*---------------Afficher notre pop up---------------*/
     $('.navbar-toggler').click(function(){
         $('.overlay, .menu-popup').show();
     });
+
+    /*---------------Cacher notre pop up---------------*/
     $('.overlay, .close-btn, .menu').click(function(){
         $('.overlay, .menu-popup').hide();
     });
 
-    const currentDate = new Date().toLocaleString();
-    $('.date-overlay').text(currentDate);
-
-    /*$('#dateSearch').on('input', function() {
+    /*---------------Recherche de vidéos par date---------------*/
+    $('#dateSearch').on('input', function() {
         const searchDate = $(this).val();
-        $('.video-container').each(function() {
-            const videoDate = $(this).find('.date-overlay').text();
+        let found = false;
+        $('.video-content').each(function() {
+            const videoDate = $(this).find('.date').text();
             if (videoDate === searchDate) {
                 $(this).show();
+                found = true;
             } else {
                 $(this).hide();
             }
         });
-    });*/
+        if (!found) {
+            $('#noResultsMessage').show();
+        } else {
+            $('#noResultsMessage').hide();
+        }
+    });
+    
 });
-
-
-
-
-                               

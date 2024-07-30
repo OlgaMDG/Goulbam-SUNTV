@@ -19,20 +19,24 @@
 </head>
 <body>
 
-    <!--------------------------En-tête de page-------------------------->
+    <!----------------------------------------------------En-tête de page---------------------------------------------------->
 
     <header>
 
-        <!--Début de bar d'en-tête-->
+        <!--Début de nav bar d'en-tête-->
         <nav class="navbar navbar-light bg-black">
-            <a class="navbar-brand" href="#">
+
+            <!--Notre logo-->
+            <a class="navbar-brand" href="#accueil">
                 <img src="medias/logo/logotransparent2.png"alt="Logo">
             </a>
+
+            <!--Notre menu humbergur-->
             <button class="navbar-toggler custom-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
-        <!--Fin de bar d'en-tête-->
+        <!--Fin de nav bar d'en-tête-->
     
         <!--Début Menu popup-->
         <div class="overlay"></div>
@@ -42,10 +46,10 @@
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#videos">Nos vidéos</a>
                     <ul class="submenu">
-                        <li><a href="#">Journaux</a></li>
-                        <li><a href="#">Documentaires</a></li>
-                        <li><a href="#">Emissions</a></li>
-                        <li><a href="#">Autres</a></li>
+                        <li><a href="#journaux">Journaux</a></li>
+                        <li><a href="#documentaires">Documentaires</a></li>
+                        <li><a href="#emissions">Emissions</a></li>
+                        <li><a href="#autres">Autres</a></li>
                     </ul>
                 </li>
                 <li><a href="#">A propos</a></li>
@@ -56,98 +60,294 @@
 
     </header>
 
-    <!--------------------------Section accueil-------------------------->
+    <!---------------------------------------------------- Corps de page ---------------------------------------------------->
 
     <main>
-        <!--<section class="accueil row justify-content-center align-items-center">
-            <div class="col-lg-8 col-md-10 text-center">
-                <h1 class="roboto-condensed-titre my-4">Le premier grand titre de la page</h1>
-                <button type="button" class="btn btn-primary mr-2">Bouton un</button>
-                <button type="button" class="btn btn-secondary">Bouton deux</button>
-            </div>
-        </section>-->
         
-        <!-- fond avec vidéo simple-->
+        <!--------------------------------- Section accueil --------------------------------->
+
         <section id="accueil" class="video-background heighty">
+
+            <!--Début de la Video de fond-->
             <video autoplay muted loop>
                 <source src="medias/videos/video-home.mp4" type="video/mp4">
             </video>
+            <!--Fin de la Video de fond-->
+
             <div class="content">
                 <div class="container">
+
+                    <!--Début de notre premier grand titre-->
                     <h1 class="roboto-condensed-titre wave-text">Le premier grand titre de la page</h1>
+                    <!--Fin de notre premier grand titre-->
+
+                    <!--Début des boutons accueil-->
                     <button type="button" class="btn btn-primary mr-2 loko1">Les directs</button>
                     <button type="button" class="btn btn-secondary loko2">Les rediffusions</button>
+                    <!--Fin des boutons accueil-->
+
                 </div>
             </div>
         </section>
 
-        <!--------------------------Section Vidéos-------------------------->
+        <!---------------------------------- Section Vidéos --------------------------------->
 
         <section id="videos" class="videos heighty default-padding bg-cover">
             <div class="videos-container">
-                <h1 class="titre-anime">REGARDER NOS VIDEOS ICI...</h1>
+                <h1 class="titre-anime titre">REGARDER NOS VIDEOS ICI...</h1>
+
+                <!--Début de notre deux catégories de vidéos en haut de notre image en rotation-->
                 <div class="video-container top-left">
                     <video src="./medias/videos/video-journaux.mp4" class="video" autoplay muted loop></video>
                     <div class="video-text">
-                        <a href="#video-journaux" target="_blank">Journaux</a>
+                        <a href="#journaux" target="_blank">Journaux</a>
                     </div>
                 </div>
                 <div class="video-container top-right">
                     <video src="./medias/videos/video-documentaire.mp4" class="video" autoplay muted loop></video>
                     <div class="video-text">
-                        <a href="#video-documentaires" target="_blank">Documentaires</a>
+                        <a href="documentaires" target="_blank">Documentaires</a>
                     </div>
                 </div>
+                <!--Fin de notre deux catégories de vidéos en bas de notre image en rotation-->
+
+                <!--Début de notre deux catégories de vidéos en bas de notre image en rotation-->
                 <div class="video-container bottom-left">
                     <video src="./medias/videos/video-emission2.mp4" class="video" autoplay muted loop></video>
                     <div class="video-text">
-                        <a href="#video-emissions" target="_blank">Emissions</a>
+                        <a href="emissions" target="_blank">Emissions</a>
                     </div>
                 </div>
                 <div class="video-container bottom-right">
                     <video src="./medias/videos/video-autres.mp4" class="video" autoplay muted loop></video>
                     <div class="video-text">
-                        <a href="#video-autres" target="_blank">Autres...</a>
+                        <a href="#autres" target="_blank">Autres...</a>
                     </div>
                 </div>
+                <!--Fin de notre deux catégories de vidéos en bas de notre image en rotation-->
+
+                <!--Début de l'image en rotation-->
                 <div class="rotating-image">
                     <img src="./medias/photos/center.png" alt="Sun" class="center-image">
                 </div>
+                <!--Fin de l'image en rotation-->
+
             </div>
         </section>
 
-        <!--------------------------Videos journaux -------------------------->
+        <!----------------------------- Section Videos de Catégories journaux ---------------------------->
 
-        <section id="video-journaux" class="video-journaux">
-            <div class="container">
-                <h1 class="mt-4">Nos vidéos journaux</h1>
+        <section id="journaux" class="video-categorie bg-black default-padding">
+            <div class="container text-center">
+                <h1 class="mt-4 titre">Nos vidéos journaux</h1>
+
+                <!--Début de la recherche par date-->
                 <div class="form-group">
                     <label for="dateSearch">Recherche par date</label>
                     <input type="date" id="dateSearch" class="form-control">
                 </div>
+                <!--Fin de la recherche par date-->
+
+                <!--Début du conteneur de vidéos-->
                 <div class="row mt-4" id="videoGallery">
+
+                    <!--vidéo1-->
                     <div class="col-md-4 video-content">
                         <video controls>
                             <source src="./medias/videos/video-journaux.mp4" type="video/mp4">
                         </video>
-                        <div class="date-overlay">2024-07-28</div>
+                        <div class="date">2024-07-28</div>
                     </div>
+
+                    <!--vidéo2-->
                     <div class="col-md-4 video-content">
                         <video controls>
                             <source src="./medias/videos/video-journaux.mp4" type="video/mp4">
                         </video>
-                        <div class="date-overlay">2024-07-29</div>
+                        <div class="date">2024-07-29</div>
                     </div>
+
+                    <!--vidéo3-->
                     <div class="col-md-4 video-content">
                         <video controls>
                             <source src="./medias/videos/video-journaux.mp4" type="video/mp4">
                         </video>
-                        <div class="date-overlay">2024-07-30</div>
+                        <div class="date">2024-07-30</div>
                     </div>
                 </div>
+                <!--Fin du conteneur de vidéos-->
+
+                <!--Début du message d'erreur s'il n'y a pas de vidéos-->
+                <div id="noResultsMessage" class="mt-4" style="display: none;">
+                    <p>Aucune vidéo trouvée pour cette date.</p>
+                </div>
+                <!--Fin du message d'erreur s'il n'y a pas de vidéos-->
+                
             </div>
         </section>
+
+        <!----------------------------- Section Videos de Catégories documentaires ---------------------------->
+
+        <section id="documentaires" class="video-categorie bg-black default-padding">
+            <div class="container text-center">
+                <h1 class="mt-4 titre">Nos vidéos documentaires</h1>
+
+                <!--Début de la recherche par date-->
+                <div class="form-group">
+                    <label for="dateSearch">Recherche par date</label>
+                    <input type="date" id="dateSearch" class="form-control">
+                </div>
+                <!--Fin de la recherche par date-->
+
+                <!--Début du conteneur de vidéos-->
+                <div class="row mt-4" id="videoGallery">
+
+                    <!--vidéo1-->
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-documentaire.mp4" type="video/mp4">
+                        </video>
+                        <div class="date">2024-07-28</div>
+                    </div>
+
+                    <!--vidéo2-->
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-documentaire.mp4" type="video/mp4">
+                        </video>
+                        <div class="date">2024-07-29</div>
+                    </div>
+
+                    <!--vidéo3-->
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-documentaire.mp4" type="video/mp4">
+                        </video>
+                        <div class="date">2024-07-30</div>
+                    </div>
+                </div>
+                <!--Fin du conteneur de vidéos-->
+
+                <!--Début du message d'erreur s'il n'y a pas de vidéos-->
+                <div id="noResultsMessage" class="mt-4" style="display: none;">
+                    <p>Aucune vidéo trouvée pour cette date.</p>
+                </div>
+                <!--Fin du message d'erreur s'il n'y a pas de vidéos-->
+                
+            </div>
+        </section>
+
+        <!----------------------------- Section Videos de Catégories emissions ---------------------------->
+
+        <section id="emissions" class="video-categorie bg-black default-padding">
+            <div class="container text-center">
+                <h1 class="mt-4 titre">Nos vidéos emissions</h1>
+
+                <!--Début de la recherche par date-->
+                <div class="form-group">
+                    <label for="dateSearch">Recherche par date</label>
+                    <input type="date" id="dateSearch" class="form-control">
+                </div>
+                <!--Fin de la recherche par date-->
+
+                <!--Début du conteneur de vidéos-->
+                <div class="row mt-4" id="videoGallery">
+
+                    <!--vidéo1-->
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-emission.mp4" type="video/mp4">
+                        </video>
+                        <div class="date">2024-07-28</div>
+                    </div>
+
+                    <!--vidéo2-->
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-emission.mp4" type="video/mp4">
+                        </video>
+                        <div class="date">2024-07-29</div>
+                    </div>
+
+                    <!--vidéo3-->
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-emission.mp4" type="video/mp4">
+                        </video>
+                        <div class="date">2024-07-30</div>
+                    </div>
+                </div>
+                <!--Fin du conteneur de vidéos-->
+
+                <!--Début du message d'erreur s'il n'y a pas de vidéos-->
+                <div id="noResultsMessage" class="mt-4" style="display: none;">
+                    <p>Aucune vidéo trouvée pour cette date.</p>
+                </div>
+                <!--Fin du message d'erreur s'il n'y a pas de vidéos-->
+                
+            </div>
+        </section>
+
+        <!----------------------------- Section Videos de Catégories autres ---------------------------->
+
+        <section id="autres" class="video-categorie bg-black default-padding">
+            <div class="container text-center">
+                <h1 class="mt-4 titre">Nos vidéos autres</h1>
+
+                <!--Début de la recherche par date-->
+                <div class="form-group">
+                    <label for="dateSearch">Recherche par date</label>
+                    <input type="date" id="dateSearch" class="form-control">
+                </div>
+                <!--Fin de la recherche par date-->
+
+                <!--Début du conteneur de vidéos-->
+                <div class="row mt-4" id="videoGallery">
+
+                    <!--vidéo1-->
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-autres.mp4" type="video/mp4">
+                        </video>
+                        <div class="date">2024-07-28</div>
+                    </div>
+
+                    <!--vidéo2-->
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-autres.mp4" type="video/mp4">
+                        </video>
+                        <div class="date">2024-07-29</div>
+                    </div>
+
+                    <!--vidéo3-->
+                    <div class="col-md-4 video-content">
+                        <video controls>
+                            <source src="./medias/videos/video-autres.mp4" type="video/mp4">
+                        </video>
+                        <div class="date">2024-07-30</div>
+                    </div>
+                </div>
+                <!--Fin du conteneur de vidéos-->
+
+                <!--Début du message d'erreur s'il n'y a pas de vidéos-->
+                <div id="noResultsMessage" class="mt-4" style="display: none;">
+                    <p>Aucune vidéo trouvée pour cette date.</p>
+                </div>
+                <!--Fin du message d'erreur s'il n'y a pas de vidéos-->
+                
+            </div>
+        </section>
+
     </main>
+
+    <!---------------------------------------------------- Footer de page ---------------------------------------------------->
+
+    <footer>
+        <p>SunTV + All Rights Reserved / Designed by Olga-GoulBAM</p>
+    </footer>
+
+    <!--Les scripts-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
