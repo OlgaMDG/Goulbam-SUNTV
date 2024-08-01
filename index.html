@@ -142,14 +142,18 @@
                 <h1 class="mt-4 titre">Nos vidéos journaux</h1>
 
                 <!--Début de la recherche par date-->
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="dateSearch">Recherche par date</label>
                     <input type="date" id="dateSearch" class="form-control">
+                </div>-->
+                <div class="form-group">
+                    <label for="dateSearchJournaux">Recherche par date</label>
+                    <input type="date" id="dateSearchJournaux" class="form-control date-search">
                 </div>
                 <!--Fin de la recherche par date-->
 
                 <!--Début du conteneur de vidéos-->
-                <div class="row mt-4" id="videoGallery">
+                <div class="row mt-4" id="videoGalleryJournaux">
 
                     <!--vidéo1-->
                     <div class="col-md-4 video-content">
@@ -178,7 +182,10 @@
                 <!--Fin du conteneur de vidéos-->
 
                 <!--Début du message d'erreur s'il n'y a pas de vidéos-->
-                <div id="noResultsMessage" class="mt-4" style="display: none;">
+                <!--<div id="noResultsMessage" class="mt-4" style="display: none;">
+                    <p>Aucune vidéo trouvée pour cette date.</p>
+                </div>-->
+                <div class="mt-4 no-results-message" id="noResultsMessageJournaux" style="display: none;">
                     <p>Aucune vidéo trouvée pour cette date.</p>
                 </div>
                 <!--Fin du message d'erreur s'il n'y a pas de vidéos-->
@@ -193,14 +200,18 @@
                 <h1 class="mt-4 titre">Nos vidéos documentaires</h1>
 
                 <!--Début de la recherche par date-->
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="dateSearch">Recherche par date</label>
                     <input type="date" id="dateSearch" class="form-control">
+                </div>-->
+                <div class="form-group">
+                    <label for="dateSearchDocumentaires">Recherche par date</label>
+                    <input type="date" id="dateSearchDocumentaires" class="form-control date-search">
                 </div>
                 <!--Fin de la recherche par date-->
 
                 <!--Début du conteneur de vidéos-->
-                <div class="row mt-4" id="videoGallery">
+                <div class="row mt-4" id="videoGalleryDocumentaires">
 
                     <!--vidéo1-->
                     <div class="col-md-4 video-content">
@@ -229,7 +240,10 @@
                 <!--Fin du conteneur de vidéos-->
 
                 <!--Début du message d'erreur s'il n'y a pas de vidéos-->
-                <div id="noResultsMessage" class="mt-4" style="display: none;">
+                <!--<div id="noResultsMessage" class="mt-4" style="display: none;">
+                    <p>Aucune vidéo trouvée pour cette date.</p>
+                </div>-->
+                <div class="mt-4 no-results-message" id="noResultsMessageDocumentaires" style="display: none;">
                     <p>Aucune vidéo trouvée pour cette date.</p>
                 </div>
                 <!--Fin du message d'erreur s'il n'y a pas de vidéos-->
@@ -241,22 +255,26 @@
 
         <section id="emissions" class="video-categorie bg-black default-padding">
             <div class="container text-center">
-                <h1 class="mt-4 titre">Nos vidéos emissions</h1>
+                <h1 class="mt-4 titre">Nos vidéos émissions</h1>
 
                 <!--Début de la recherche par date-->
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="dateSearch">Recherche par date</label>
                     <input type="date" id="dateSearch" class="form-control">
+                </div>-->
+                <div class="form-group">
+                    <label for="dateSearchEmissions">Recherche par date</label>
+                    <input type="date" id="dateSearchEmissions" class="form-control date-search">
                 </div>
                 <!--Fin de la recherche par date-->
 
                 <!--Début du conteneur de vidéos-->
-                <div class="row mt-4" id="videoGallery">
+                <div class="row mt-4" id="videoGalleryEmissions">
 
                     <!--vidéo1-->
                     <div class="col-md-4 video-content">
                         <video controls>
-                            <source src="./medias/videos/video-emission.mp4" type="video/mp4">
+                            <source src="./medias/videos/video-emission2.mp4" type="video/mp4">
                         </video>
                         <div class="date">2024-07-28</div>
                     </div>
@@ -264,7 +282,7 @@
                     <!--vidéo2-->
                     <div class="col-md-4 video-content">
                         <video controls>
-                            <source src="./medias/videos/video-emission.mp4" type="video/mp4">
+                            <source src="./medias/videos/video-emission2.mp4" type="video/mp4">
                         </video>
                         <div class="date">2024-07-29</div>
                     </div>
@@ -272,7 +290,7 @@
                     <!--vidéo3-->
                     <div class="col-md-4 video-content">
                         <video controls>
-                            <source src="./medias/videos/video-emission.mp4" type="video/mp4">
+                            <source src="./medias/videos/video-emission2.mp4" type="video/mp4">
                         </video>
                         <div class="date">2024-07-30</div>
                     </div>
@@ -280,7 +298,10 @@
                 <!--Fin du conteneur de vidéos-->
 
                 <!--Début du message d'erreur s'il n'y a pas de vidéos-->
-                <div id="noResultsMessage" class="mt-4" style="display: none;">
+                <!--<div id="noResultsMessage" class="mt-4" style="display: none;">
+                    <p>Aucune vidéo trouvée pour cette date.</p>
+                </div>-->
+                <div class="mt-4 no-results-message" id="noResultsMessageEmissions" style="display: none;">
                     <p>Aucune vidéo trouvée pour cette date.</p>
                 </div>
                 <!--Fin du message d'erreur s'il n'y a pas de vidéos-->
@@ -292,17 +313,21 @@
 
         <section id="autres" class="video-categorie bg-black default-padding">
             <div class="container text-center">
-                <h1 class="mt-4 titre">Nos vidéos autres</h1>
+                <h1 class="mt-4 titre">Nos autres vidéos</h1>
 
                 <!--Début de la recherche par date-->
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="dateSearch">Recherche par date</label>
                     <input type="date" id="dateSearch" class="form-control">
+                </div>-->
+                <div class="form-group">
+                    <label for="dateSearchAutres">Recherche par date</label>
+                    <input type="date" id="dateSearchAutres" class="form-control date-search">
                 </div>
                 <!--Fin de la recherche par date-->
 
                 <!--Début du conteneur de vidéos-->
-                <div class="row mt-4" id="videoGallery">
+                <div class="row mt-4" id="videoGalleryAutres">
 
                     <!--vidéo1-->
                     <div class="col-md-4 video-content">
@@ -331,8 +356,11 @@
                 <!--Fin du conteneur de vidéos-->
 
                 <!--Début du message d'erreur s'il n'y a pas de vidéos-->
-                <div id="noResultsMessage" class="mt-4" style="display: none;">
+                <!--<div id="noResultsMessage" class="mt-4" style="display: none;">
                     <p>Aucune vidéo trouvée pour cette date.</p>
+                </div>-->
+                <div class="mt-4 no-results-message" id="noResultsMessageAutres" style="display: none;">
+                    <p>Aucune vidéo trouvée pour cette date. Mettez d'autre date</p>
                 </div>
                 <!--Fin du message d'erreur s'il n'y a pas de vidéos-->
                 
@@ -341,15 +369,17 @@
 
     </main>
 
-    <!---------------------------------------------------- Footer de page ---------------------------------------------------->
+    <!---------------------------------------------------- Pied de page ---------------------------------------------------->
 
     <footer>
-        <p>SunTV + All Rights Reserved / Designed by Olga-GoulBAM</p>
+        <div class="container text-center">
+            <p>&copy; 2023 SUN TV. Tous droits réservés.</p>
+        </div>
     </footer>
 
-    <!--Les scripts-->
+    <!----------------------------------------------------Le Script js ---------------------------------------------------->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 </body>

@@ -47,7 +47,7 @@ Main Color : #52ace4
     background-size: cover;
 }
 
-/*test de fond (à supprimer à la fin!!!!!!!!!!!)*/
+/*Backgrounds*/
 .bg-lighty{
     background-color: #52ace4;
 }
@@ -457,7 +457,7 @@ display: none;
 }
 
 /*Notre message d'erreur s'il n'y a pas de vidéos*/
-#noResultsMessage{
+.no-results-message{
     color: red;
 }
 
