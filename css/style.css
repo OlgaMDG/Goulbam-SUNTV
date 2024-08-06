@@ -46,13 +46,16 @@ Main Color : #52ace4
     background-position: center center;
     background-size: cover;
 }
+.text-white{
+    color: white !important;
+}
 
 /*Backgrounds*/
 .bg-lighty{
-    background-color: #52ace4;
+    background-color: #52ace4 !important;
 }
 .bg-black{
-    background-color: black;
+    background-color: black !important;
 }
 
   
@@ -415,52 +418,6 @@ display: none;
 }
 }
 
-/*About section A propos*/
-
-#about {
-    background-color: #52ace4;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.about-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: black;
-    border-radius: 10px;
-}
-
-#about h3 {
-    font-size: 1.75rem;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #666;
-}
-
-#about p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-#about ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#about li {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 10px 0;
-    color: #555;
-}
-
-#about strong {
-    color: #333;
-}
-
-
 /*Nos videos de chaque catégorie*/
 .video-content {
     margin-bottom: 30px;
@@ -496,6 +453,158 @@ display: none;
 .no-results-message{
     color: red;
 }
+
+/*section A propos*/
+#about {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.compartments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.compartment {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.compartment:hover {
+    transform: scale(1.05);
+}
+
+.compartment i {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.compartment h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.compartment p, .compartment ul {
+    text-align: left;
+    color: #555;
+}
+
+.compartment ul {
+    list-style: none;
+    padding: 0;
+}
+
+.compartment ul li {
+    margin-bottom: 10px;
+}
+
+.compartment ul li strong {
+    color: #333;
+}
+
+
+/*section contact*/
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #52ace4 0%, #52ace4 100%);
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.contact-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.contact-container p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.contact-form .submit-btn {
+    background: #52ace4;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background: white;
+    color: #52ace4;
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-container h1 {
+        font-size: 2em;
+    }
+
+    .contact-container p {
+        font-size: 1em;
+    }
+}
+
+
 
 
 /*Footer*/
