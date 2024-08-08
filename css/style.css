@@ -378,7 +378,7 @@ display: none;
 }
 .top-left,.top-right,.bottom-left,.bottom-right {
     all: unset;
-    display: initial; /* rétablir l'affichage par défaut */
+    display: initial; 
   }
 .video{
     width: 95%;
@@ -455,7 +455,7 @@ display: none;
 }
 
 /*section A propos*/
-#about {
+/*#about {
     padding: 20px;
     background-color: #f8f9fa;
 }
@@ -515,7 +515,68 @@ display: none;
 
 .compartment ul li strong {
     color: #333;
+}*/
+
+#about{
+    padding: 50px;
 }
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.compartment {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.compartment:hover{
+    background-color: #333;
+    color: #fff;
+}
+.about-titre{
+    text-transform: uppercase;
+    background-color: #52ace4;
+    padding: 2px 4px; 
+}
+.about-photo {
+    width: 40%;
+    margin-right: 20px;
+}
+
+.text-content {
+    width: 60%;
+}
+.text-content p{
+    text-align: justify;
+}
+.text-content li{
+    text-align: justify;
+}
+.row:nth-child(2) .compartment {
+    flex-direction: row-reverse;
+}
+
+.row:nth-child(2) .about-photo {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
 
 
 /*section contact*/
