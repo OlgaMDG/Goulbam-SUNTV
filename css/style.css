@@ -21,6 +21,7 @@ Main Color : #52ace4
 */
 
 /*Notre font*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
@@ -33,6 +34,7 @@ Main Color : #52ace4
 }
 
 /*css default*/
+
 .default-padding {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -42,24 +44,34 @@ Main Color : #52ace4
 .heighty{
     height: 100vh;
 }
-.bg-cover {
-    background-position: center center;
-    background-size: cover;
-}
 .text-white{
     color: white !important;
 }
+.roboto-condensed-titre {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
 
 /*Backgrounds*/
+
 .bg-lighty{
     background-color: #52ace4 !important;
 }
 .bg-black{
     background-color: black !important;
 }
-
+.bg-cover {
+    background-position: center center;
+    background-size: cover;
+}
+.dual-background {
+    background: linear-gradient(to bottom, #000 20%, #52ace4 20%);
+}
   
 /*Header et menu popup*/
+
 .navbar {
     position: fixed;
     top: 0; 
@@ -68,7 +80,6 @@ Main Color : #52ace4
     padding: 5px 0;
     z-index: 1000;
 }
-
 header .menu-popup {
     display: none;
     position: fixed;
@@ -83,18 +94,34 @@ header .menu-popup {
     z-index: 1000;
     border-radius: 10%;
 }
-
-header .menu-popup a{
-    color: #ccc;
+.menu-popup li{
+    color: black;
 }
-header .menu-popup a:hover{
+.menu-popup i{
+    color: #0a7ac0;
+}
+/*header .menu-popup a{
+    color: #ccc;
+}*/
+.menu-liste{
+    border-bottom: 1px solid #ccc;
+    padding: 2px;
+}
+.menu-liste:hover{
     background-color: #ccc;
     color: #52ace4;
+    padding: 2px;
+
 }
+/*header .menu-popup a:hover{
+    background-color: #ccc;
+    color: #52ace4;
+}*/
 header .menu-popup a:hover{
     background-color: #ccc;
     color: #52ace4;
     padding: 0 20px 0 0;
+    text-decoration: none;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -132,9 +159,9 @@ header .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
-    color: #ccc;
+    color: red;
 }
 
 
@@ -145,12 +172,9 @@ header .close-btn {
 h1 {
     text-transform: uppercase;
 }
-.roboto-condensed-titre {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-}
+
+/*Grand titre selon l'écran*/
+
 @media (min-width: 1200px) {
     .roboto-condensed-titre {
         font-size: 90px; 
@@ -178,6 +202,7 @@ h1 {
 }
 
 /*fond video*/
+
 .video-background {
     position: relative;
     width: 100%;
@@ -206,6 +231,7 @@ h1 {
 }
 
 /*boutton accueil (à voir si on peut changer leur place dans css par défaut)!!!!!!!!!!!!*/
+
 .loko1{
     background-color: #52ace4;
     color: white;
@@ -230,6 +256,7 @@ h1 {
 /* sections videos*/
 
 /*animation du titre*/
+
 .titre{
     font-family: 'chromium';
     color: #08F1DC;
@@ -254,6 +281,7 @@ h1 {
 }
 
 /*nos videos*/
+
 .videos {
     margin: 0;
     display: flex;
@@ -419,6 +447,12 @@ display: none;
 }
 
 /*Nos videos de chaque catégorie*/
+label{
+    color: #fff;
+}
+.video-titre{
+    color: #fff;
+}
 .video-content {
     margin-bottom: 30px;
     width: 100%;
@@ -455,67 +489,6 @@ display: none;
 }
 
 /*section A propos*/
-/*#about {
-    padding: 20px;
-    background-color: #f8f9fa;
-}
-
-.about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-.compartments {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.compartment {
-    flex: 1 1 calc(25% - 20px);
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    position: relative;
-}
-
-.compartment:hover {
-    transform: scale(1.05);
-}
-
-.compartment i {
-    font-size: 2em;
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
-.compartment h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #007bff;
-}
-
-.compartment p, .compartment ul {
-    text-align: left;
-    color: #555;
-}
-
-.compartment ul {
-    list-style: none;
-    padding: 0;
-}
-
-.compartment ul li {
-    margin-bottom: 10px;
-}
-
-.compartment ul li strong {
-    color: #333;
-}*/
 
 #about{
     padding: 50px;
@@ -525,19 +498,12 @@ display: none;
     flex-direction: column;
     align-items: center;
 }
-
-.titre {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .row {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
 }
-
 .compartment {
     display: flex;
     align-items: center;
@@ -576,51 +542,62 @@ display: none;
     margin-left: 20px;
     margin-right: 0;
 }
-
-
+@media (max-width: 768px) {
+    .row{
+        display: block;
+    }
+    .compartment{
+        display: block;
+        width: 100%;
+    }
+    .about-photo{
+        width: 50%;
+        text-align: center;
+    }   
+    .text-content{
+        width: 100%;
+    }
+}
 
 /*section contact*/
 
 .contact {
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #52ace4 0%, #52ace4 100%);
+    /*background: linear-gradient(135deg, #52ace4 0%, #52ace4 100%);*/
     color: #fff;
     padding: 50px 20px;
 }
-
 .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    text-align: left;
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
+    margin: auto;
 }
-
 .contact-container h1 {
     margin-bottom: 20px;
     font-size: 2.5em;
 }
-
 .contact-container p {
     margin-bottom: 30px;
     font-size: 1.2em;
 }
-
 .contact-form .form-group {
     margin-bottom: 20px;
     text-align: left;
 }
-
 .contact-form .form-group label {
     display: block;
     margin-bottom: 5px;
 }
-
 .contact-form .form-group input,
 .contact-form .form-group textarea {
     width: 100%;
@@ -629,13 +606,11 @@ display: none;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.9);
 }
-
 .contact-form .form-group input:focus,
 .contact-form .form-group textarea:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-
 .contact-form .submit-btn {
     background: #52ace4;
     color: #fff;
@@ -645,7 +620,6 @@ display: none;
     cursor: pointer;
     transition: background 0.3s ease;
 }
-
 .contact-form .submit-btn:hover {
     background: white;
     color: #52ace4;
@@ -664,8 +638,73 @@ display: none;
         font-size: 1em;
     }
 }
+.contact-left,
+.contact-right {
+    width: 48%; /* Ajuste selon tes besoins */
+}
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+.contact-info li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+.contact-info i {
+    margin-right: 10px;
+}
+.social-media {
+    margin-top: 30px;
+}
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.social-icons li {
+    margin-right: 10px;
+}
+.social-icons a {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    background-color: transparent; 
+    color: #fff; 
+    font-size: 1.5em; 
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease !important;
+}
 
+.social-icons a:hover {
+    transform: scale(1.2) !important; 
+    background-color: #fff; 
+    color: #52ace4; 
+    text-decoration: none;
+}
 
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-right {
+        margin-top: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
 
 
 /*Footer*/
